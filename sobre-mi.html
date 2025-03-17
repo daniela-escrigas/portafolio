@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- jQuery (necesario para Slick) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body class="sobre-mi">
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="img/home-page/logo_1.svg" width="80" alt="logo"></a>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="sobre-mi.html">Sobre mi</a></li>
+                <li><a href="contact.html">Contacta</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="sobre-mi-home">
+        <h1> "[Design] is the <br> ultimate positivity <br>energy."</h1>
+        <div>
+            <div>
+                <ul class="sobre-mi-keywords">
+                    <li>UX/UI</li>
+                    <li>3D</li>
+                    <li>Diseño Editorial</li>
+                    <li>Diseño Tipográfico</li>
+
+                </ul>
+            </div>
+            
+        </div>
+
+    </section>
+    <section class="sobre-mi-intro">
+        <h2>Sobre mi</h2>
+        <p>
+            Hola, soy Daniela Escrigas, una diseñadora gráfica apasionada por la creatividad y el diseño con propósito. Mi enfoque se basa en entender la finalidad de cada proyecto de manera profunda y ofrecer soluciones visuales originales que no solo sean estéticamente atractivas, sino que también sean funcionales, accesibles y socialmente responsables. Para mí, el diseño no es solo una cuestión de estética, sino una herramienta para crear experiencias que conecten de manera auténtica con las personas.<br><br>
+            Mi pasión por el arte, la historia del arte, el cine y la fotografía ha influido profundamente en mi estilo y forma de trabajar. Estas influencias enriquecen mi enfoque visual, ayudándome a integrar elementos culturales y emocionales en mis diseños. Creo que el diseño es una forma de comunicación visual que debe resonar no solo en lo estético, sino también en lo emocional, por lo que siempre busco que mis proyectos no solo sean visualmente atractivos, sino también significativos.
+        </p>
+
+        <div class="columnas-intro">
+            <p>Soy una persona en constante evolución, con una gran curiosidad por todo lo que me rodea. Estoy siempre abierta a aprender, probar nuevas herramientas y técnicas, y encontrar nuevas formas de mejorar mi trabajo. La crítica constructiva es una parte esencial de mi proceso creativo, y aprecio profundamente la oportunidad de recibir retroalimentación que me ayude a crecer. Mi habilidad para escuchar y aprender de esas críticas me ha permitido perfeccionar mis habilidades, encontrar nuevas soluciones y seguir desarrollándome como profesional. <br><br>
+
+            Además, me considero una persona con una mirada muy artística y detallista, lo que me permite aportar soluciones estéticamente agradables pero también funcionales. Trabajo de manera colaborativa y disfruto el proceso de intercambio de ideas con otros. La colaboración en equipo es algo que valoro mucho, ya que creo que las mejores ideas surgen cuando diferentes perspectivas se unen para lograr un mismo objetivo.<br><br>En mi tiempo libre, me gusta seguir ampliando mis conocimientos a través de la exploración de nuevas tendencias, la participación en workshops, y el estudio continuo de diferentes disciplinas relacionadas con el diseño. El diseño es, para mí, una forma de ver el mundo y una oportunidad constante de crecer.Cada nuevo proyecto es una invitación a seguir aprendiendo, explorando y creando.</p>
+
+        </div>
+
+        <article class="grafico-habilidades"> <!-- Gráfico -->
+            <h2>Habilidades</h2>
+            <canvas id="polarChart"></canvas>
+        </article>
+
+        <article class="ver-proyectos">
+            <h1>Ver proyectos</h1>
+            <section class="contenedor-proyectos carrusel">
+                <div class="proyecto">
+                    <img src="img/sobre-mi/projects/lux1 2.jpg" alt="Proyecto Lux">
+                    <div class="info-proyecto">
+                        <div class="categoria">UX/UI</div>
+                        <h2 class="titulo">Lux</h2>
+                        <a href="proyectos.html" class="button">Read more &#x2192;</a>
+                    </div>
+                </div>
+                
+                <div class="proyecto">
+                    <img src="img/sobre-mi/projects/identity1 6.jpg" alt="Proyecto Identity">
+                    <div class="info-proyecto">
+                        <div class="categoria">Diseño Editorial</div>
+                        <h2 class="titulo">Identity</h2>
+                        <a href="#" class="button">Read more &#x2192;</a>
+                    </div>
+                </div>
+        
+                <div class="proyecto">
+                    <img src="img/sobre-mi/projects/fotollibre 2.jpg" alt="Proyecto Fotollibre">
+                    <div class="info-proyecto">
+                        <div class="categoria">Diseño Editorial</div>
+                        <h2 class="titulo">Èpoques Glorioses</h2>
+                        <a href="#" class="button">Read more &#x2192;</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </section>    
+        
+    <footer class="main-footer">
+
+        <div class="logo">
+            <a href="index.html"><img src="img/home-page/logo_1.svg" width="80" alt="logo"></a>
+        </div>
+    
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            // Cambia dinámicamente el título del carrusel usando jQuery
+            $('.ver-proyectos h1').text('Ver proyectos');
+            
+            // Activar carrusel con Slick
+            $('.carrusel').slick({
+                slidesToShow: 1, 
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                prevArrow: '<button class="slick-prev">&#10094;</button>',
+                nextArrow: '<button class="slick-next">&#10095;</button>',
+            });
+    
+            // Uso de Lodash para eliminar proyectos duplicados
+            const proyectos = [
+                { id: 1, nombre: "Lux" },
+                { id: 2, nombre: "Identity" },
+                { id: 3, nombre: "Èpoques Glorioses" },
+                { id: 2, nombre: "Identity" } // Proyecto duplicado
+            ];
+    
+            const proyectosUnicos = _.uniqBy(proyectos, 'id');
+            console.log("Proyectos únicos:", proyectosUnicos);
+        });
+       
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctx = document.getElementById('polarChart').getContext('2d');
+
+            new Chart(ctx, {
+                type: 'polarArea',
+                data: {
+                    labels: ['UX/UI', 'Diseño Editorial', '3D', 'Diseño Tipográfico', 'Branding'],
+                    datasets: [{
+                        label: 'Nivel de experiencia',
+                        data: [8, 7, 6, 7, 9], 
+                        backgroundColor: [
+                            '#ff73f1',  // Rosa
+                            '#daff5c',  // Amarillo
+                            'white',    // Blanco
+                            'black',    // Negro
+                            '#9D00FF'   // Lila
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: 'white'
+                            }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.5)' // Líneas del gráfico blancas semi-transparentes
+                            },
+                            pointLabels: {
+                                color: 'white' // Texto de categorías en blanco
+                            },
+                            ticks: {
+                                color: 'white', // Números de los ejes en blanco
+                                backdropColor: 'transparent' // Fondo transparente detrás de los números
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

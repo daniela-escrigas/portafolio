@@ -1,0 +1,30 @@
+[
+    {
+      "title": "Lux",
+      "category": "UX/UI",
+      "image": "img/projects/lux/lux.jpg",
+      "description": "Este proyecto se enfoca en el diseño de una aplicación dedicada a brindar apoyo y recursos a personas en proceso de recuperación de Trastornos de la Conducta Alimentaria (TCA).",
+      "link": "proyectos.html"
+    },
+    {
+      "title": "Identity",
+      "category": "Diseño Editorial",
+      "image": "img/projects/identity/identity2.jpg",
+      "description": "Identity es una publicación editorial creada para la comunidad de alumnos y docentes de ESDAPC.",
+      "link": "#"
+    },
+    {
+      "title": "Liquid Reality",
+      "category": "Diseño Tipográfico",
+      "image": "img/projects/tipo/liquid-reality.jpg",
+      "description": "Este proyecto se enfoca en la especialización de aspectos técnicos y conceptuales de la tipografía.",
+      "link": "#"
+    },
+    {
+      "title": "Èpoques glorioses",
+      "category": "Diseño Editorial",
+      "image": "img/projects/fotollibre/fotollibre.jpg",
+      "description": "Èpoques glorioses es un fotolibro compuesto por 62 fotografías analógicas.",
+      "link": "#"
+    }
+  ]

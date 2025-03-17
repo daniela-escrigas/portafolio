@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 466.93 538.1">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: CoolveticaRg-Regular, Coolvetica;
+        font-size: 288.8px;
+        letter-spacing: -.04em;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <text class="cls-2" transform="translate(0 470.81)"><tspan x="0" y="0">dani</tspan></text>
+      <polygon class="cls-1" points="391.5 0 365.09 119.19 466.93 119.19 348.78 192.85 322.38 312.04 275.76 238.38 157.6 312.04 246.94 192.85 200.32 119.19 302.16 119.19 391.5 0"/>
+    </g>
+  </g>
+</svg>

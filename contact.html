@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactar - Mi Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="contactar">
+
+    <header class="main-header light color">
+        <div class="logo">
+            <a href="index.html"><img src="img/home-page/logo_1.svg" width="80" alt="logo"></a>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="sobre-mi.html">Sobre mi</a></li>
+                <li><a href="contact.html">Contacta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="contact-section">
+        <div class="split-container">
+            <section class="info-section">
+                <h2>Hablemos de tu próximo proyecto!</h2><br>
+                <div class="ubicacion">
+                    <h3>Mi ubicación</h3>
+                    <p id="location-info">Obteniendo ubicación...</p>
+                </div>
+                <h3>Dirección</h3>
+                <p>Reus, Tarragona <br>España</p>
+                <h3>Contacta</h3>
+                <p>+34 626349112<br>danielaescrigas@gmail.com</p>
+            </section>
+
+            <section class="form-section">
+                <h2>Contacta</h2>
+                <p>Ponte en contacto con nosotros a través del formulario para obtener más detalles sobre cómo podemos ayudarte con tu próximo proyecto.<br><br>
+                   
+                ¡Esperamos con interés trabajar contigo!</p>
+                <form id="contactForm" novalidate> <!-- desactiva la validación del navegador -->
+                    <div class="form-group">
+                        <div class="form-field">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre">
+                            <div class="error-message"></div> <!-- mensaje de error -->
+                        </div>
+                        <div class="form-field">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" name="apellidos" id="apellidos">
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <div class="form-field">
+                            <label for="correo">Email</label>
+                            <input type="email" name="correo" id="correo">
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-field">
+                            <label for="numero">Teléfono</label>
+                            <input type="tel" name="numero" id="numero">
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+        
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje"></textarea>
+                    <div class="error-message"></div>
+        
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+        </div>
+    </article>
+
+    <footer class="main-footer">
+        <div class="logo">
+            <a href="index.html"><img src="img/home-page/logo_1.svg" width="80" alt="logo"></a>
+        </div>
+
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("#contactForm");
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                limpiarMensajesError();
+    
+                const campos = [
+                    { selector: "#nombre", mensaje: "El campo 'Nombre' es obligatorio." },
+                    { selector: "#apellidos", mensaje: "El campo 'Apellidos' es obligatorio." },
+                    { selector: "#correo", mensaje: "El campo 'Email' es obligatorio." },
+                    { selector: "#numero", mensaje: "El campo 'Teléfono' es obligatorio." },
+                    { selector: "#mensaje", mensaje: "El campo 'Mensaje' es obligatorio." },
+                ];
+    
+                let hayErrores = false;
+    
+                campos.forEach(({ selector, mensaje }) => {
+                    const campo = document.querySelector(selector);
+                    const mensajeError = campo.nextElementSibling;
+    
+                    if (!campo.value.trim()) {
+                        mensajeError.textContent = mensaje;
+                        hayErrores = true;
+                    }
+                });
+    
+                // Validar el email
+                const emailCampo = document.querySelector("#correo");
+                if (emailCampo.value.trim() && !validarEmail(emailCampo.value)) {
+                    emailCampo.nextElementSibling.textContent = "Por favor, introduce un email válido.";
+                    hayErrores = true;
+                }
+    
+                if (!hayErrores) {
+                    form.submit();
+                }
+            });
+    
+            function limpiarMensajesError() {
+                document.querySelectorAll(".error-message").forEach(mensaje => mensaje.textContent = "");
+            }
+    
+            function validarEmail(email) {
+                const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return patronEmail.test(email);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const locationInfo = document.getElementById("location-info");
+    
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const latitude = position.coords.latitude.toFixed(5);
+                        const longitude = position.coords.longitude.toFixed(5);
+                        locationInfo.innerHTML = `📍 Latitud: ${latitude}, Longitud: ${longitude}`;
+                    },
+                    function (error) {
+                        locationInfo.innerHTML = "No se pudo obtener tu ubicación.";
+                    }
+                );
+            } else {
+                locationInfo.innerHTML = "La geolocalización no está disponible en tu navegador.";
+            }
+        });
+    </script>
+</body>
+</html>
